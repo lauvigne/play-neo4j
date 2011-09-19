@@ -1,0 +1,31 @@
+Neo4j module and plugin from the Play framework
+
+1. Edit application.conf like this:
+
+neo4j.storeDir=data
+neo4j_otherdb.storeDir=otherdb
+neo4j_anotherdb.storeDir=anotherdb
+
+2. Use the graph database like this:
+
+public class Application extends Controller {
+
+    public static void index() {
+        EmbeddedGraphDatabase graphDb = Neo4j.getGraphDb();
+        EmbeddedGraphDatabase graphDb2 = Neo4j.getGraphDb("otherdb");
+        EmbeddedGraphDatabase graphDb3 = Neo4j.getGraphDb("anotherdb");
+        render();
+    }
+
+}
+
+What works:
+* Embedded database
+* Neo4j EmbeddedGraphDatabase params. Just add neo4j.paramName=value to application.conf
+* Multiple database support
+* Clean shutdown of databases
+
+What doesn't work yet:
+* No automatic shutdown and reload of database on change in application.conf
+* No support for connecting to REST server
+* No support for starting REST server for embedded database

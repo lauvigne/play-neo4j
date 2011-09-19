@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.dbpowder.plugins.LIB_CONTAINER/flat~project/play-neo4j/lib"/>
+	<classpathentry kind="lib" path="/usr/local/play-1.2.3/framework/play-1.2.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
